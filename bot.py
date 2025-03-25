@@ -241,7 +241,8 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     return ConversationHandler.END
 
 def main():
-    app = Application.builder().token("8102887528:AAEn8lhe2whpQoZl3G_-YFs-jQejUTnS3ew").build()
+    import os
+app = Application.builder().token(os.getenv("8102887528:AAEn8lhe2whpQoZl3G_-YFs-jQejUTnS3ew")).build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
