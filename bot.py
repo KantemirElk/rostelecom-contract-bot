@@ -239,7 +239,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
 def main() -> None:
     # Создаем приложение с токеном из переменной окружения
-    app = Application.builder().token(os.getenv("8102887528:AAEn8lhe2whpQoZl3G_-YFs-jQejUTnS3ew")).build()
+    app = Application.builder().token(os.getenv("TELEGRAM_BOT_TOKEN")).build()
 
     # Создаем ConversationHandler
     conv_handler = ConversationHandler(
